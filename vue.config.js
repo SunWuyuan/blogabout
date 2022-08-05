@@ -5,5 +5,5 @@ module.exports = defineConfig({
   ]
 })
 module.exports = {
-  publicPath: 'https://wuyuan.dev/blogabout/',
+  publicPath: '/',
 }

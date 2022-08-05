@@ -1,31 +1,67 @@
 <template>
   <v-app>
-    <v-row>
-      <v-btn color="primary" class="ma-3" href="https://status.wuyuan.dev/">网站状态</v-btn>
-      <v-col cols="auto">
-        <v-dialog transition="dialog-bottom-transition" max-width="600">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn color="primary" v-bind="attrs" v-on="on">作品</v-btn>
-          </template>
-          <template v-slot:default="dialog">
-            <v-card>
-              <v-toolbar color="primary" dark>我的作品</v-toolbar>
+    <v-app-bar app color="primary" dark>
+      <v-toolbar-title>我的网站</v-toolbar-title>
 
-<div style="height: 300px;overflow: auto;">
-              <v-btn color="primary" class="ma-2" href="https://baidu.com">工具1</v-btn>
-              <v-btn color="primary" class="ma-2" href="https://baidu.com">工具1</v-btn>
+      <v-spacer></v-spacer>
 
-</div>
+      <v-btn href="https://wuyuan.dev" target="_blank" text>
+        <span class="mr-2">作者博客</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
 
-              <v-card-actions class="justify-end">
-                <v-btn text @click="dialog.value = false">关闭</v-btn>
-              </v-card-actions>
-            </v-card>
-          </template>
-        </v-dialog>
-      </v-col>
-      <v-btn color="primary" class="ma-3" href="https://wuyuan.dev/about/">关于我</v-btn>
-    </v-row>
+    <v-main>
+
+
+      <template>
+
+
+
+        <v-container >
+          <v-row>
+            <v-col v-for="card in cards" :key="card.title" cols="12" sm="4">
+              <v-card>
+                <v-img :src="card.src" class="white--text align-end"
+                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.2)" height="auto">
+                  <v-card-title v-text="card.title"></v-card-title>
+                </v-img>
+
+                <v-card-actions><v-text v-text="card.text" class="mx-2"></v-text>
+                  <v-spacer></v-spacer>
+
+                  <v-btn :href="card.link">访问
+                    <v-icon>mdi-open-in-new</v-icon>
+                  </v-btn>
+
+ 
+                </v-card-actions>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+
+      </template>
+    </v-main>
   </v-app>
 </template>
 
+<script>
+export default {
+}
+</script>
+
+<script>
+  export default {
+    data: () => ({
+      cards: [
+        { title: '博客', src: 'https://cdn.wuyuan.dev/img/wz_wuyuan~dev.jpeg',  link: 'https://wuyuan.dev' , text: '我的博客，也是个人主页哦'},
+        { title: '网站状态', src: 'https://cdn.wuyuan.dev/img/网页捕获_31-7-2022_143648_status.wuyuan.dev.jpeg',  link: 'https://status.wuyuan.dev/', text: '我的博客，也是个人主页哦'},
+        { title: '网页sans启动器', src: 'https://cdn.wuyuan.dev/img/20220731144055.png',  link: 'https://sans.wuyuan.dev', text: '我的博客，也是个人主页哦'},
+        { title: 'Best airlines', src: 'https://codeyuan.tk/bj.png',  link: '', text: '我的博客，也是个人主页哦'},
+      { title: 'Best airlines', src: 'https://codeyuan.tk/bj.png',  link: '', text: '我的博客，也是个人主页哦'},
+      
+      ],
+    }),
+  }
+</script>
