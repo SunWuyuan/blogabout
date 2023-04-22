@@ -65,7 +65,7 @@ export default {
   data: () => ({
     cards: [
       { title: '博客', link: 'wuyuan.dev', about: '我的博客', flex: "3" },
-      { title: '网站状态', link: 'status.wuyuan.dev', about: '我的网站状态监控', flex: "3" },
+      { title: '网站状态', link: 'uptime.wuyuan.dev', about: '我的网站状态监控', flex: "3" },
       { title: '网页sans启动器', link: 'sans.wuyuan.dev', about: '快速找到你想要的网页版sans游戏', flex: "3" },
       { title: '元长', link: 'longlink.wuyuan.dev', about: '沙雕长链接', flex: "3" },
       { title: '悟元短链接', link: 'url.wuyuan.dev', about: '一个自己在用的短链接服务', flex: "3" },
@@ -73,6 +73,8 @@ export default {
       { title: 'cdm', link: 'cdm.wuyuan.dev', about: '快速下载网易云音乐资源', flex: "3" },
       { title: '元启', link: 'yuanqi.wuyuan.dev', about: '浏览器起始页', flex: "3" },
       { title: '资源站', link: 'drive.wuyuan.dev', about: '个人资源站', flex: "3" },
+      { title: '私有Alist', link: 'alist.wuyuan.dev', about: '私有Alist服务', flex: "3" },
+      { title: '私有密码管理', link: '这个服务悟元不给链接哈哈哈', about: '私有密码管理服务', flex: "3" },
     ],
     colors: [
       'primary',

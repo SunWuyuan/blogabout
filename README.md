@@ -1,4 +1,4 @@
-# blogabout
+# mylink
 
 ## Project setup
 ```
